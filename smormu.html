@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smormu</title>
+    <style>
+        body {
+            background-color: #0f3b0f;
+            color: #b6ff00;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        .slime {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background: url('slime.gif') repeat;
+            opacity: 0.8;
+            z-index: -1;
+        }
+        .chaos-img {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            animation: wiggle 1s infinite alternate;
+        }
+        @keyframes wiggle {
+            0% { transform: rotate(-5deg) scale(1); }
+            100% { transform: rotate(5deg) scale(1.2); }
+        }
+        .weird-button {
+            background-color: #4caf50;
+            border: 3px solid #b6ff00;
+            padding: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            position: absolute;
+            transform: rotate(-10deg);
+        }
+        .weird-button:hover {
+            transform: rotate(10deg) scale(1.2);
+            background-color: #2e8b57;
+        }
+    </style>
+</head>
+<body>
+    <div class="slime"></div>
+    <h1>SMORMU</h1>
+    <button class="weird-button" style="top: 50px; left: 30%;">DO NOT PRESS</button>
+    <button class="weird-button" style="top: 200px; right: 20%;">???</button>
+    <img src="weird1.png" class="chaos-img" style="top: 150px; left: 10%;">
+    <img src="weird2.png" class="chaos-img" style="top: 300px; right: 15%;">
+    
+    <audio id="ominous-click" src="click.mp3"></audio>
+    <script>
+        window.onload = function() {
+            document.getElementById('ominous-click').play();
+        };
+    </script>
+</body>
+</html>
